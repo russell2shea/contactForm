@@ -1,0 +1,260 @@
+@media screen and (min-width: 400px){
+	footer{
+		padding-bottom: 2em;
+	}
+}
+@media screen and (min-width: 640px) {
+	h3{
+		font-size: 2rem;
+	}
+	p, li{
+		font-size: 1rem;
+	}
+	.loophole{
+		margin-top: -40px;
+		//padding-top: 50px;
+	}
+	.orangeBar{
+		margin-left: -100%;
+		margin-right: 40%;
+		position: relative;
+		z-index: 2;
+		&--position{
+			margin-left: 63.5%;
+		}
+		& h3{
+			margin-left: 0px;
+			text-align: left;
+
+		}
+	}
+	.nilus{
+		margin-top: -40px;
+		padding-top: 200px;
+		@include padtopbot(0px, 0px);
+		background: url('https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Nilus.jpg') 40% 0% no-repeat;
+		@include parllaxBGsize;
+	}
+	.blueBox{
+		background: rgba(173,219,216,0.90);
+		margin-top: 80px;
+		@include padtopbot(10px, 10px);
+	}
+	.showbr{
+		display: none;
+	}
+	.kit{
+		margin-top: -40px;
+		padding-top: 50px;
+	}
+	.testSection{
+		margin-top: -60px;
+		padding-top: 70px;
+	}
+	.circleCheck{
+		width: 70%;
+	}
+		.testSection img{
+			margin-top: 60px;
+		}
+	  .test{
+	  	max-width: none;
+	  	width: 100%;
+	    @include martopbot(0, 2em);
+	  	&:before{
+			content: ' ';
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    left: auto;
+		    right: -27px;
+		    top: 95px;
+		    bottom: auto;
+		    border: 22px solid;
+		    border-color:  transparent transparent transparent $orange;
+	  	}
+	  	&:after{
+	  		content: ' ';
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    left: auto;
+		    right: -22px;
+		    top: 95px;
+		    bottom: auto;
+		    border: 22px solid;
+		    border-color:  transparent transparent transparent #D7F6F3;
+	  	}
+	  }
+	  .image--left{
+
+	  	&:before{
+			content: ' ';
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    left: auto;
+		    right: -30.5%;
+		    top: 95px;
+		    bottom: auto;
+		    border: 22px solid;
+		    border-color:  transparent $orange transparent transparent;
+	  	}
+	  	&:after{
+	  		content: ' ';
+		    position: absolute;
+		    width: 0;
+		    height: 0;
+		    left: auto;
+		    right: -32.5%;
+		    top: 95px;
+		    bottom: auto;
+		    border: 22px solid;
+		    border-color:  transparent #D7F6F3 transparent transparent;
+	  	}
+	  }	  
+	.test__left .test--cite{
+		margin-left: 10%;
+	}
+	.headline--arrow{
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+		display: block;
+		margin-top: 67px;
+		position: relative;
+		z-index: 2;
+
+	}
+	.Headlinesect{
+		margin-top: -300px;
+		padding-top: 200px;
+	}
+	.headline--arrow{
+		padding-top: 0.1em;
+		padding-bottom: 0.1em;
+	}
+	.headline--arrow h1{
+		font-size: 2rem;
+	}
+	.headlinebr{
+		display: block;
+
+	}
+	.desWrap{
+		margin: 0 auto;
+		display: block;
+		max-width: 750px;
+	}
+	.deck{
+		margin: 0 auto;
+		display: block;
+		max-width: 750px;
+	}
+	.deck p{
+		font-size: 1.4rem;	
+	}
+	.moveVid{
+		margin-top: 130px;
+	}
+	.loophole .medium-4{
+		height: 1000px;
+	}
+}
+@media screen and (min-width: 683px) {
+	.test__left .test--cite{
+		margin-left: 20%;
+	}
+		.loophole .medium-4{
+		height: 900px;
+	}
+}
+@media screen and (min-width: 750px) {
+	.nilus{
+		background-position: 50% 0%;
+	}
+	.image--left{
+	  	&:before{
+		    right: -29.5%;
+	  	}
+	  	&:after{
+		    right: -31.5%;
+	  	}
+	  }	
+	 .loophole .medium-4{
+		height: 800px;
+	}
+}
+@media screen and (min-width: 761px) {
+	.test__left .test--cite{
+		margin-left: 25%;
+	}
+
+}
+@media screen and (min-width: 790px) {
+	.test__left .test--cite{
+		margin-left: 30%;
+	}
+
+}
+@media screen and (min-width: 800px) {
+	.nilus{
+		background-position: 60% 0%;
+	}
+
+}
+@media screen and (min-width: 863px) {
+	.test__left .test--cite{
+		margin-left: 35%;
+	}
+}
+@media screen and (min-width: 900px) {
+	.nilus{
+		background-position: center 0%;
+	}
+					 .loophole .medium-4{
+		height: 700px;
+	}
+}
+@media screen and (min-width: 926px) {
+	.test__left .test--cite{
+		margin-left: 40%;
+	}
+}
+@media screen and (min-width: 1024px) {
+
+	p, li{
+		font-size: 1.1rem;
+	}
+	.sidePad{
+		 padding: 0px 20px 0px 20px;
+	}
+	.nilus{
+		margin-top: -40px;
+		padding-top: 200px;
+		@include padtopbot(0px, 0px);
+		background: url('https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RLL/Trump_Social_Security_Compliant/RLL_TrumpSocialSecurity_Nilus.jpg') center 0% no-repeat;
+	}
+	.blueBox{
+		background: rgba(173,219,216,0.90);
+		margin-top: 80px;
+		margin-left: 80px;
+		margin-right: -60px;
+		margin-bottom: 80px;
+		@include padtopbot(10px, 10px);
+	}
+	.testSection img{
+		margin-top: 60px;
+		max-width: 140px;
+	}
+	.test__left .test--cite{
+		margin-left: 160px;
+	}
+	.test, .test__left{
+		@include martopbot(2em, 2em);
+	}
+}
+
+
+
+
