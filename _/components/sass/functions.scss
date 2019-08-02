@@ -1,0 +1,16 @@
+
+  @mixin bgColor($colorofbg){
+    background-color: $colorofbg;
+    @if $colorofbg == $grey-blue or $black{
+      color: $white;
+    }
+  }
+
+  @mixin padtopbot($padtop, $padbot){
+    padding-top: $padtop;
+    padding-bottom: $padbot;
+  }
+  @mixin martopbot($martop, $marbot){
+    margin-top: $martop;
+    margin-bottom: $marbot;
+  }
