@@ -1,2 +1,33 @@
 @import url("https://rsms.me/inter/inter-ui.css");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&display=swap");
+body {
+  display: grid;
+  height: 100vh;
+  background: #E2E2E5; }
+
+.contact {
+  display: grid;
+  grid-template-rows: [first] auto [second] auto;
+  place-self: center;
+  max-width: 800px;
+  width: 95%;
+  justify-items: center;
+  font-family: "Lato", sans-serif; }
+  .contact_intro {
+    max-width: 65%;
+    background: #ffffff;
+    padding: 1.75em 1.75em 1.5em 1.75em; }
+    .contact_intro h5 {
+      font-size: 2.2em;
+      font-weight: 900;
+      margin-top: 0.2em;
+      margin-bottom: 0.75em; }
+    .contact_intro p {
+      color: #464e59;
+      font-size: 1em;
+      line-height: 1.75em; }
+  .contact_form {
+    padding: 1.75em 1.75em 1.75em 1.75em;
+    background-color: #464e59;
+    color: #ffffff;
+    max-width: 85%; }

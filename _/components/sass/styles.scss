@@ -2,7 +2,11 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
 //------------------'Reset'--------------------
-
+	body{
+		display: grid;
+		height: 100vh;
+		background: #E2E2E5;
+	}
 //------------------'Fonts'--------------------
 	@import "fonts";
 //------------------'Colors'--------------------

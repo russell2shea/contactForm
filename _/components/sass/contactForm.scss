@@ -1,0 +1,32 @@
+.contact{
+	display: grid;
+	//grid-template-columns: [left] 1fr [right] 1fr;
+	grid-template-rows: [first] auto [second] auto; 
+ 	place-self: center;
+	max-width: 800px;
+	width: 95%;
+	justify-items: center;
+	font-family: $lato;
+	
+	&_intro{
+		max-width: 65%;
+		background: $white;
+		padding: 1.75em 1.75em 1.5em 1.75em;
+		& h5{
+			font-size: 2.2em;
+			font-weight: 900;
+			@include martopbot(0.2em, 0.75em);
+		}
+		& p{
+			color: $grey-blue;
+			font-size: 1em;
+			line-height: 1.75em;
+		}
+	} //_intro 
+
+	&_form{
+		padding: 1.75em 1.75em 1.75em 1.75em;
+		@include bgColor($grey-blue);
+		max-width: 85%;
+	} // _form
+} // .contact
