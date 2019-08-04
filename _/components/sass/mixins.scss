@@ -5,7 +5,6 @@
       color: $white;
     }
   }
-
   @mixin padtopbot($padtop, $padbot){
     padding-top: $padtop;
     padding-bottom: $padbot;
@@ -13,4 +12,7 @@
   @mixin martopbot($martop, $marbot){
     margin-top: $martop;
     margin-bottom: $marbot;
+  }
+  @mixin easeInOut {
+     transition:0.4s ease-in-out;
   }

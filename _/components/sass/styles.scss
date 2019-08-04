@@ -1,17 +1,12 @@
-
-@import url('https://rsms.me/inter/inter-ui.css');
-
 //------------------'Reset'--------------------
-	body{
-		display: grid;
-		height: 100vh;
-		background: #E2E2E5;
-	}
+	@import "normalize";
+//------------------'Global'--------------------
+	@import "global";
 //------------------'Fonts'--------------------
 	@import "fonts";
 //------------------'Colors'--------------------
 	@import "colors";
-//------------------'Funcitons'--------------------
-	@import "functions";
+//------------------'Mixins'--------------------
+	@import "mixins";
 //------------------'contactForm'--------------------
 	@import "contactForm";
