@@ -36,7 +36,7 @@
       <div class="contact_wrapper">
           <form action="#">
           
-            <label for="firstName">Name</label>
+            <label for="firstName"><span class="error">* </span>Name</label>
             <div class="contact_form-inputBorder">
                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                   <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -47,7 +47,7 @@
               <input type="text" id="firstName" name="firstname" placeholder="Your Name">
             </div>
 
-            <label for="email">Email</label>
+            <label for="email"><span class="error">* </span>Email</label>
             <div class="contact_form-inputBorder">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                   <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -58,18 +58,43 @@
               <input type="email" name="emailField" placeholder="email@here.you" id="email">
             </div>
 
-            <label for="message">Message</label>
+            <label for="message"><span class="error">* </span>Message</label>
             <div class="contact_form-textBorder">
               <textarea name="message" id="message"></textarea>
             </div>
 
-            <input type="submit" class="submit" id="submit" value="Submit">
+
+            <!-- Submit Button -->
+              <div class="contact_form-inputBorder">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <line class="top" x1="0" y1="0" x2="900" y2="0"/>
+                    <line class="left" x1="0" y1="60" x2="0" y2="-920"/>
+                    <line class="bottom" x1="325" y1="60" x2="-600" y2="60"/>
+                    <line class="right" x1="325" y1="0" x2="325" y2="1380"/>
+                </svg>
+
+                  <div class="card">
+                    <div class="card__face card__face--front">
+                      <input type="submit" class="submit" id="submit" value="Submit">
+                    </div>
+                    <div class="card__face card__face--back">
+                        <div class="sent">
+                          <div class="status">
+                          </div>
+                          <div class="message">...Sending</div>
+                        </div>
+                    </div>
+                  </div>
+
+              </div>
+            <!-- / Submit Button -->
+
         
           </form>
       </div>
     </div>
     <!-- / Form -->
-
+<!-- add inner html to status and message dependign on the result -->
 
     
   </div>

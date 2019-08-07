@@ -63,10 +63,17 @@
 				background: $grey-blue;
 				@include easeInOut;
 				cursor: pointer;
+
+
+
+
+				 perspective: 600px;
+				/*
 				&:hover{
 					border-color: $white;
 					color: $white;
 				}
+				*/
 			}
 		}
 		& textarea{
@@ -74,6 +81,132 @@
 		}
 	} // _form
 } // .contact
+
+.error {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: $red-faded;
+	display: none;
+}
+
+
+/* Flip Animation */
+
+
+/* / Flip Animaiton */
+
+
+
+
+.card {
+  //width: 100%;
+  //height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  //position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.card__face--back {
+	transform: rotateY(180deg);
+	position: relative;
+	z-index: 2;
+		& .sent{
+		border: solid 2px $grey;
+		width: 297px;
+		height: 40px;
+		margin-top: -66px;
+		margin-left: 14px;
+	    text-transform: uppercase;
+	    color: #939393;
+	    text-align: center;
+	    background: $grey-blue;
+		@include easeInOut;
+	    cursor: pointer;
+
+		& .success{
+			animation: fadeToGreen 4s;
+			width: 25%;
+			height: 30px;
+			padding-top: 10px;
+			float: left;
+			background: $green-faded;
+			&-message{
+				margin-top: 10px;
+				letter-spacing: 3px;
+				color: rgba(255,255,255,0.8);
+				animation: fade 6s;
+			}
+			& p{
+				color: $white;
+				padding: 0px;
+				margin: 0px;
+				font-weight: bold;
+				font-size: 18px;
+  				animation: rotating 1.2s;
+			}
+		}
+
+	}
+}
+
+
+
+@keyframes fade {
+	from{opacity:0} to{opacity:1}
+}
+
+@keyframes fadeToGreen {
+  0% {
+    background-color: $grey;
+  }
+  100% {
+    background-color: $green-faded;
+  }
+ }
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
 
 @media screen and (min-width: 360px){
 	.contact{
@@ -96,6 +229,9 @@
 		&_intro{
 			max-width: 320px;
 			padding: 1.75em 1.75em 1.5em 1.75em;
+			& p{
+				font-size: 1.1em;
+			}
 		}
 		&_form{
 			padding: 2.5em 2.5em 2.5em 2.5em;

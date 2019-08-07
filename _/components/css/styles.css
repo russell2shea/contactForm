@@ -382,12 +382,128 @@ body {
         -webkit-transition: 0.4s ease-in-out;
         -o-transition: 0.4s ease-in-out;
         transition: 0.4s ease-in-out;
-        cursor: pointer; }
-        .contact_form input.submit:hover, .contact_form textarea.submit:hover {
-          border-color: #ffffff;
-          color: #ffffff; }
+        cursor: pointer;
+        -webkit-perspective: 600px;
+        perspective: 600px;
+        /*
+				&:hover{
+					border-color: $white;
+					color: $white;
+				}
+				*/ }
     .contact_form textarea {
       height: 30px; }
+
+.error {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #c95252;
+  display: none; }
+
+/* Flip Animation */
+/* / Flip Animaiton */
+.card {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative; }
+
+.card.is-flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.card__face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.card__face--back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  position: relative;
+  z-index: 2; }
+  .card__face--back .sent {
+    border: solid 2px #939393;
+    width: 297px;
+    height: 40px;
+    margin-top: -66px;
+    margin-left: 14px;
+    text-transform: uppercase;
+    color: #939393;
+    text-align: center;
+    background: #464e59;
+    -webkit-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    cursor: pointer; }
+    .card__face--back .sent .success {
+      -webkit-animation: fadeToGreen 4s;
+      animation: fadeToGreen 4s;
+      width: 25%;
+      height: 30px;
+      padding-top: 10px;
+      float: left;
+      background: #51c66a; }
+      .card__face--back .sent .success-message {
+        margin-top: 10px;
+        letter-spacing: 3px;
+        color: rgba(255, 255, 255, 0.8);
+        -webkit-animation: fade 6s;
+        animation: fade 6s; }
+      .card__face--back .sent .success p {
+        color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+        font-weight: bold;
+        font-size: 18px;
+        -webkit-animation: rotating 1.2s;
+        animation: rotating 1.2s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadeToGreen {
+  0% {
+    background-color: #939393; }
+  100% {
+    background-color: #51c66a; } }
+
+@keyframes fadeToGreen {
+  0% {
+    background-color: #939393; }
+  100% {
+    background-color: #51c66a; } }
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 @media screen and (min-width: 360px) {
   .contact_wrapper {
@@ -404,6 +520,8 @@ body {
     .contact_intro {
       max-width: 320px;
       padding: 1.75em 1.75em 1.5em 1.75em; }
+      .contact_intro p {
+        font-size: 1.1em; }
     .contact_form {
       padding: 2.5em 2.5em 2.5em 2.5em;
       max-width: 350px; }
