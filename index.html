@@ -5,11 +5,12 @@
     
     <title>Contact Form Practice</title>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 
     <script src="contactform.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap" rel="stylesheet">
     <!--=====  CSS ====-->
-      <link rel="stylesheet" href="./styles.css">
+      <link rel="stylesheet" href="css/styles.css">
     <!--=====  / CSS ====-->
 
 </head>
@@ -33,9 +34,9 @@
     <!-- Form -->
     <div class="contact_form">
       <div class="contact_wrapper">
-          <form action="#">
+          <form name="contact" action="#">
           
-            <label for="firstName"><span class="error">* </span>Name</label>
+            <label for="firstName"><span class="error-name">* </span>Name</label>
             <div class="contact_form-inputBorder">
                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                   <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -43,10 +44,10 @@
                   <line class="bottom" x1="325" y1="60" x2="-600" y2="60"/>
                   <line class="right" x1="325" y1="0" x2="325" y2="1380"/>
               </svg>
-              <input type="text" id="firstName" name="firstname" placeholder="Your Name" required>
+              <input type="text" id="firstName" name="firstname"  placeholder="Your Name" required>
             </div>
 
-            <label for="email"><span class="error">* </span>Email</label>
+            <label for="email"><span class="error-email">* </span>Email</label>
             <div class="contact_form-inputBorder">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
                   <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -54,12 +55,12 @@
                   <line class="bottom" x1="325" y1="60" x2="-600" y2="60"/>
                   <line class="right" x1="325" y1="0" x2="325" y2="1380"/>
               </svg>
-              <input type="email" name="emailField" placeholder="email@here.you" id="email" required>
+              <input type="email" name="emailField" required placeholder="email@here.you"  id="email" required>
             </div>
 
-            <label for="message"><span class="error">* </span>Message</label>
+            <label for="message"><span class="error-message">* </span>Message</label>
             <div class="contact_form-textBorder">
-              <textarea name="message" id="message"></textarea>
+              <textarea name="message" name="textField" required id="message"></textarea>
             </div>
 
 
