@@ -1,31 +1,57 @@
-
-
 document.addEventListener("DOMContentLoaded", function(){
   
-  const card = document.querySelector('.card');
+  let card = document.querySelector('.card');
+  let emailInput = document.querySelector('input[name="emailField"]');
+  let nameInput = document.querySelector('input[name="firstname"]');
+  let emailError = document.querySelector('.error-email');
+  let nameError = document.querySelector('.error-name');
+  
+  // submit button Function
   card.addEventListener( 'click', function() {
-    //prevent default, run try catch of post then..
-    card.classList.toggle('is-flipped');
-    //if success
+    event.preventDefault();
+    let nameField = document.forms["contact"]["firstname"].value;
+    let emailField = document.forms["contact"]["emailField"].value;
 
-    const statusElement = document.querySelector('.status');
-    const messageElement = document.querySelector('.message');
+    // shake submit button if there are empty fields
+     if(!nameField || !emailField){
+       document.querySelector('.card__face').classList.add('shake');
+        setTimeout(function(){ 
+          document.querySelector('.card__face').classList.remove('shake'); 
+        }, 700);
+     }
+    
+    // show name error and listen for blur
+    if(!nameField ){
+      nameError.style.display='inline';
+      nameInput.onchange = function() {
+        if (window.getComputedStyle(nameError).display === "inline") {
+          nameError.style.display='none';
+        }
+      };
+    }
 
-    statusElement.innerHTML = '<div class="success"><p>✓</p></div>';
-    messageElement.innerHTML = '<div class="success-message">Message Sent</div>';
-  });
+    // show email error and listen for blur
+    if(!emailField ){
+      emailError.style.display='inline';
+      emailInput.onchange = function() {
+        if (window.getComputedStyle(emailError).display === "inline") {
+          emailError.style.display='none';
+        }
+      };
+    }
+
+    // Show success
+     if(emailField && nameField){
+      card.classList.toggle('is-flipped');
+
+      let statusElement = document.querySelector('.status');
+      let messageElement = document.querySelector('.message');
+
+      statusElement.innerHTML = '<div class="success"><p>✓</p></div>';
+      messageElement.innerHTML = '<div class="success-message">Message Sent</div>';
+    }
+
+  });// card click event
 
 
-
-});// when ready 
-
-
-
-
-
-
-// add whe click do animation and show yes button 
-// success btn click toggles back to submit 
-// do same but make a error button
-// add listener to when all 3 field are done to add class to submit button
-// add try catch and submit call to tie into submit animations
+});
